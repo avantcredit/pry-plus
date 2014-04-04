@@ -3,9 +3,9 @@ pry-plus
 
 Get up and going with a good set of pry tools right away.
 
+Based on [RKing's pry-plus](https://github.com/rking/pry-plus) updated with support for ruby 2.0.
+
 <%
-  require 'cgi'
-  def h unclean; CGI::escapeHTML unclean end
   require 'yaml'
   list = YAML.load_file 'in.yml'
 %>
@@ -14,14 +14,14 @@ Dependent Gems
 --------------
 
 <% list.each do |name, info| %>
-### [<%= name %>](<%= info['url'] %>)
+  ### [<%= name %>](<%= info['url'] %>)
 
-<%=h info['desc'] %>
+  <%= info['desc'] %>
 
-<% if info['use cases'] %>
-  <% info['use cases'].each do |e| %>
-- <%=h e %>
+  <% if info['use cases'] %>
+    <% info['use cases'].each do |e| %>
+  - <%= e %>
+    <% end %>
   <% end %>
-<% end %>
 
 <% end %>
