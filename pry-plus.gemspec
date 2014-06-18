@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description   = deps.join ' + '
   s.homepage      = 'https://github.com/avantcredit/pry-plus'
   s.email         = ['rking-pry-plus@sharpsaw.org','matt.dressel@avantcredit.com']
-  s.authors       = ['☈king','dresselm']
+  s.authors       = ['rking','dresselm']
   s.files         = Dir['lib/*']
   s.executables   = Dir['bin/*'].map {|e| e.sub 'bin/', ''}
   deps.each { |e| s.add_dependency e }
