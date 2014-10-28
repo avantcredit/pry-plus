@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.email         = ['rking-pry-plus@sharpsaw.org','matt.dressel@avantcredit.com']
   s.authors       = ['☈king','dresselm']
   s.files         = Dir['lib/*']
-  s.executables   = Dir['bin/*'].map {|e| e.sub 'bin/', ''}
+  s.executables   = Dir['bin/*'].map { |e| e.sub 'bin/', '' }
   deps.each { |e| s.add_dependency e }
 end
